@@ -1,0 +1,7 @@
+digraph "basic_type"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{basic_type\n|+ _size\l+ _name\l+ TYPE_UNSPEC\l+ TYPE_INT\l+ TYPE_DOUBLE\l+ TYPE_BOOLEAN\l+ TYPE_STRING\l+ TYPE_POINTER\l+ TYPE_STRUCT\l+ TYPE_VOID\l+ TYPE_ERROR\l|+ basic_type()\l+ basic_type()\l+ size()\l+ name()\l+ subtype()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +_subtype" ,arrowhead="odiamond",fontname="Helvetica"];
+}

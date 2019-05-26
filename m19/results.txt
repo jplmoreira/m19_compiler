@@ -1,0 +1,376 @@
+Passed 88/117
+
+A-01-1-N-ok.m19
+	Passed
+
+A-02-2-N-ok.m19
+	Passed
+
+A-03-3-N-ok.m19
+	Passed
+
+A-04-4-N-ok.m19
+	Passed
+
+A-05-5-N-ok.m19
+	Passed
+
+A-06-6-N-ok.m19
+	Passed
+
+A-07-7-N-ok.m19
+	Passed
+
+A-08-8-N-ok.m19
+	Passed
+
+B-01-9-N-ok.m19
+	Passed
+
+B-02-10-N-ok.m19
+	Passed
+
+B-03-11-N-ok.m19
+	Passed
+
+B-04-12-N-ok.m19
+	Passed
+
+B-05-13-N-ok.m19
+	Passed
+
+B-06-14-N-ok.m19
+	Passed
+
+B-07-15-N-ok.m19
+	Passed
+
+B-08-16-N-ok.m19
+	Passed
+
+B-09-17-N-ok.m19
+	Passed
+
+B-10-18-N-ok.m19
+	Passed
+
+B-11-19-N-ok.m19
+	Passed
+
+B-12-20-N-ok.m19
+	Passed
+
+B-13-21-N-ok.m19
+	Passed
+
+B-14-22-N-ok.m19
+	Passed
+
+B-15-23-N-ok.m19
+	Passed
+
+B-16-24-N-ok.m19
+	Passed
+
+B-17-25-N-ok.m19
+	Passed
+
+B-20-26-N-ok.m19
+	Passed
+
+B-21-27-N-ok.m19
+	Passed
+
+B-22-28-N-ok.m19
+	Passed
+
+B-23-29-N-ok.m19
+	Passed
+
+B-24-30-N-ok.m19
+	Passed
+
+B-25-31-N-ok.m19
+	Passed
+
+C-01-32-N-ok.m19
+	Passed
+
+C-02-33-N-ok.m19
+	Passed
+
+C-03-34-N-ok.m19
+	Passed
+
+C-04-35-N-ok.m19
+	Passed
+
+C-05-36-N-ok.m19
+	Passed
+
+C-06-37-N-ok.m19
+	Passed
+
+C-07-38-N-ok.m19
+	Passed
+
+C-08-39-N-ok.m19
+	Passed
+
+C-09-40-N-ok.m19
+	Passed
+
+C-10-41-N-ok.m19
+	Passed
+
+C-11-42-N-ok.m19
+	Passed
+
+C-12-43-N-ok.m19
+	Passed
+
+C-13-44-N-ok.m19
+	Passed
+
+C-14-45-N-ok.m19
+	Passed
+
+C-15-46-N-ok.m19
+	Passed
+
+C-16-47-N-ok.m19
+	Passed
+
+C-17-48-N-ok.m19
+	Passed
+
+C-18-49-N-ok.m19
+	Passed
+
+C-19-50-N-ok.m19
+	Passed
+
+C-20-51-N-ok.m19
+	Passed
+
+D-01-52-N-ok.m19
+	Passed
+
+D-02-53-N-ok.m19
+	Passed
+
+D-03-54-N-ok.m19
+	Passed
+
+E-01-55-N-ok.m19
+	Passed
+
+E-02-56-N-ok.m19
+	Passed
+
+E-03-57-N-ok.m19
+	Passed
+
+E-04-58-N-ok.m19
+	Passed
+
+E-05-59-N-ok.m19
+	Passed
+
+E-06-60-N-ok.m19
+	Passed
+
+E-07-61-N-ok.m19
+	Passed
+
+E-08-62-N-ok.m19
+	Passed
+
+E-09-63-N-ok.m19
+	Passed
+
+E-10-64-N-ok.m19
+	Passed
+
+E-11-65-N-ok.m19
+	Passed
+
+E-12-66-N-ok.m19
+	Passed
+
+E-13-67-N-ok.m19
+	Passed
+
+E-14-68-N-ok.m19
+	Passed
+
+E-15-69-N-ok.m19
+	Passed
+
+F-01-70-N-ok.m19
+	Passed
+
+F-02-71-N-ok.m19
+	Passed
+
+F-03-72-N-ok.m19
+	Passed
+
+F-04-73-N-ok.m19
+	Passed
+
+F-05-74-N-ok.m19
+	Passed
+
+F-06-75-N-ok.m19
+	Passed
+
+J-01-76-N-ok.m19
+	Passed
+
+J-02-77-N-ok.m19
+	Passed
+
+J-03-78-N-ok.m19
+	Passed
+
+J-04-79-N-ok.m19
+	Passed
+
+J-05-80-N-ok.m19
+	Passed
+
+J-06-81-N-ok.m19
+	Passed
+
+J-07-82-N-ok.m19
+	Passed
+
+J-08-83-N-ok.m19
+	Passed
+
+J-09-84-N-ok.m19
+	Passed
+
+K-01-85-N-ok.m19
+	Passed
+
+K-02-86-N-ok.m19
+	Passed
+
+K-03-87-N-ok.m19
+	Passed
+
+K-04-88-N-ok.m19
+	Failed at compiling file
+
+K-05-89-N-ok.m19
+	Failed:
+1c1
+< 
+---
+> ola
+
+K-06-90-N-ok.m19
+	Failed at compiling file
+
+K-07-91-N-ok.m19
+	Failed:
+1c1
+< 
+---
+> ola10
+
+K-08-92-N-ok.m19
+	Failed:
+1c1
+< 
+---
+> ola10
+
+K-09-93-N-ok.m19
+	Failed at compiling file
+
+L-01-94-N-ok.m19
+	Failed at generating assembly
+
+L-02-95-N-ok.m19
+	Failed at generating assembly
+
+L-03-96-N-ok.m19
+	Failed at generating assembly
+
+M-01-97-N-ok.m19
+	Failed at compiling file
+
+M-02-98-N-ok.m19
+	Passed
+
+M-03-99-N-ok.m19
+	Failed at generating assembly
+
+M-04-100-N-ok.m19
+	Failed at generating assembly
+
+O-01-101-N-ok.m19
+	Failed at compiling file
+
+O-02-102-N-ok.m19
+	Failed:
+1c1
+< 00
+---
+> 1E12
+
+O-03-103-N-ok.m19
+	Failed at compiling file
+
+P-01-104-N-ok.m19
+	Failed at compiling file
+
+P-02-105-N-ok.m19
+	Failed at compiling file
+
+P-03-106-N-ok.m19
+	Failed at compiling file
+
+P-04-107-N-ok.m19
+	Failed at compiling file
+
+P-05-108-N-ok.m19
+	Failed at compiling file
+
+P-06-109-N-ok.m19
+	Failed at compiling file
+
+P-07-110-N-ok.m19
+	Failed at compiling file
+
+Q-01-111-N-ok.m19
+	Failed at compiling file
+
+Q-02-112-N-ok.m19
+	Failed at compiling file
+
+Q-03-113-N-ok.m19
+	Failed:
+1c1
+< 
+---
+> 6.1E1
+
+Q-04-114-N-ok.m19
+	Failed:
+1c1
+< 
+---
+> 6.1E1
+
+Q-05-115-N-ok.m19
+	Failed at compiling file
+
+Q-06-116-N-ok.m19
+	Failed at compiling file
+
+Q-07-117-N-ok.m19
+	Failed at compiling file

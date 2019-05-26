@@ -1,0 +1,11 @@
+digraph "cdk::typed_node"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node31 [label="{cdk::typed_node\n||+ typed_node()\l+ type()\l+ type()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node32 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node32 [label="{cdk::basic_node\n||+ ~basic_node()\l+ lineno()\l+ label()\l+ accept()\l# basic_node()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcdk_1_1basic__node.html"];
+  Node33 -> Node31 [color="grey25",fontsize="10",style="solid",label=" #_type" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node33 [label="{basic_type\n|+ _size\l+ _name\l+ TYPE_UNSPEC\l+ TYPE_INT\l+ TYPE_DOUBLE\l+ TYPE_BOOLEAN\l+ TYPE_STRING\l+ TYPE_POINTER\l+ TYPE_STRUCT\l+ TYPE_VOID\l+ TYPE_ERROR\l|+ basic_type()\l+ basic_type()\l+ size()\l+ name()\l+ subtype()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structbasic__type.html"];
+  Node33 -> Node33 [color="grey25",fontsize="10",style="solid",label=" +_subtype" ,arrowhead="odiamond",fontname="Helvetica"];
+}
