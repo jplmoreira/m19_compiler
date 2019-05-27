@@ -15,8 +15,9 @@ void m19::type_checker::do_sequence_node(cdk::sequence_node * const node, int lv
   }
 }
 
+
 //---------------------------------------------------------------------------
-void m19::type_checker::do_map_node(cdk::nil_node * const node, int lvl) {
+void m19::type_checker::do_map_node(cdk::map_node * const node, int lvl) {
   const std::string &id = node->identifier();
   std::shared_ptr<m19::symbol> symbol = _symtab.find(id);
 
