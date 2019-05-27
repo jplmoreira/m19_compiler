@@ -176,6 +176,7 @@ stmt : expr ';'                                          { $$ = new m19::evaluat
      | '[' expr ']' '?' stmt %prec tIFX                  { $$ = new m19::if_node(LINE, $2, $5); }
      | '[' expr ']' '?' stmt ':' stmt                    { $$ = new m19::if_else_node(LINE, $2, $5, $7); }
      | block                                             { $$ = $1; }
+     | tAPPLY tIDENTIFIER tTO lval tFROM expr tRANGE expr { $$ = new m19::map_node(LINE, *$2, $4, $6, $8); delete $2;}
      ;
 
 expr : literal                   { $$ = $1; }

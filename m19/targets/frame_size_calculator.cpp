@@ -7,6 +7,10 @@ m19::frame_size_calculator::~frame_size_calculator() {
   os().flush();
 }
 
+void m19::frame_size_calculator::do_map_node(cdk::add_node * const node, int lvl) {
+  _localsize += 4;
+}
+
 void m19::frame_size_calculator::do_add_node(cdk::add_node * const node, int lvl) {
   // EMPTY
 }

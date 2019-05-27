@@ -16,6 +16,41 @@ void m19::type_checker::do_sequence_node(cdk::sequence_node * const node, int lv
 }
 
 //---------------------------------------------------------------------------
+void m19::type_checker::do_map_node(cdk::nil_node * const node, int lvl) {
+  const std::string &id = node->identifier();
+  std::shared_ptr<m19::symbol> symbol = _symtab.find(id);
+
+  if (symbol == nullptr) {
+    throw std::string("function doesn't exist");
+  } else if (!symbol->is_function()) {
+    throw std::string(id + "is not a function.");
+  } else {
+    if (symbol->arguments().size() == 1) {
+      throw std::string("function needs to have only one argument.");
+    }
+    if (symbol->arguments[0]->name() != symbol->type()->name()) {
+      throw std::string("function arguments need to be the same type as the function.");
+    }
+  }
+
+  node->vector()->accept(this, lvl);
+  if (node->vector()->type()->name() != basic_type::TYPE_POINTER) {
+    throw std::string("vector is not a pointer");
+  }
+  if (node->vector()->type()->subtype()->name() != symbol->type()->name()) {
+    throw std::string("vector element needs to be the same type as the function.");
+  }
+
+  node->low()->accept(this, lvl);
+  if (node->low()->type()->name() != basic_type::TYPE_INT) {
+    throw std::string("index low must be integer.");
+  }
+
+  node->high()->accept(this, lvl);
+  if (node->high()->type()->name() != basic_type::TYPE_INT) {
+    throw std::string("index high must be integer.");
+  }
+}
 
 void m19::type_checker::do_nil_node(cdk::nil_node * const node, int lvl) {
   // EMPTY
@@ -191,7 +226,7 @@ void m19::type_checker::processComparative(cdk::binary_expression_node * const n
     node->right()->type(node->left()->type());
   else if (node->left()->type()->name() == basic_type::TYPE_UNSPEC)
     node->left()->type(node->right()->type());
-  
+
   node->type(new basic_type(4, basic_type::TYPE_INT));
 }
 
@@ -302,7 +337,7 @@ void m19::type_checker::do_print_node(m19::print_node * const node, int lvl) {
 
 void m19::type_checker::do_read_node(m19::read_node * const node, int lvl) {
   ASSERT_UNSPEC;
-  
+
   if (node->type() == nullptr)
     node->type(new basic_type(0, basic_type::TYPE_UNSPEC));
 }

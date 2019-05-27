@@ -7,6 +7,69 @@
 #include "ast/all.h"  // all.h is automatically generated
 
 //---------------------------------------------------------------------------
+void m19::postfix_writer::do_map_node(cdk::nil_node * const node, int lvl) {
+  int lbl_end = ++_lbl;
+  int lbl_cond = ++_lbl;
+  _offset -= 4;
+  int offset = _offset;
+
+  node->low()->accept(this, lvl); //int counter = low();
+  _pf.DUP32();
+  _pf.LOCAL(offset);
+  _pf.STINT();
+
+  _pf.LABEL(mklbl(lbl_cond));
+  _pf.LOCAL(offset); // counter > high() ?
+  _pf.LDINT();
+
+  node->high()->accept(this, lvl);
+  _pf.GT();
+  _pf.JZ(mklbl(lbl_end));
+
+  node->vector()->accept(this, lvl + 2);
+  _pf.LOCAL(offset);
+  _pf.LDINT();
+  _pf.INT(node->vector()->type()->subtype()->size());
+  _pf.MUL(); // addr(vec) offset 4
+  _pf.ADD() // addr(vec + offset)
+  if (node->vector()->type()->subtype()->name() == basic_type::TYPE_DOUBLE) {
+    _pf.LDDOUBLE();
+  } else {
+    _pf.LDINT();
+  }
+
+  _pf.CALL(node->function_name());
+  _pf.TRASH(node->vector()-type()->subtype()->size());
+
+  if (node->vector()->type()->subtype()->name() == basic_type::TYPE_DOUBLE) {
+    _pf.LDFVAL64();
+  } else {
+    _pf.LDFVAL32();
+  }
+
+  node->vector()->accept(this, lvl + 2);
+  _pf.LOCAL(offset);
+  _pf.LDINT();
+  _pf.INT(node->vector()->type()->subtype()->size());
+  _pf.MUL(); // addr(vec) offset 4
+  _pf.ADD() // addr(vec + offset)
+  if (node->vector()->type()->subtype()->name() == basic_type::TYPE_DOUBLE) {
+    _pf.STDOUBLE();
+  } else {
+    _pf.STINT();
+  }
+
+  _pf.LOCAL(offset);
+  _pf.LDINT();
+  _pf.DUP32();
+  _pf.INT(1);
+  _pf.ADD();
+  _pf.LOCAL(offset);
+  _pf.STINT();
+
+  _pf.JMP(mklbl(lbl_cond));
+  _pf.LABEL(mklbl(lbl_end));
+}
 
 void m19::postfix_writer::do_nil_node(cdk::nil_node * const node, int lvl) {
   // EMPTY
@@ -756,7 +819,7 @@ void m19::postfix_writer::do_function_definition_node(m19::function_definition_n
 
   if (node->default_ret()) {
     node->default_ret()->accept(this, lvl);
-  } else if (_function->type()->name() == basic_type::TYPE_INT || 
+  } else if (_function->type()->name() == basic_type::TYPE_INT ||
              _function->type()->name() == basic_type::TYPE_POINTER) {
     _pf.INT(0);
   }

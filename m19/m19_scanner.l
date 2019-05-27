@@ -26,6 +26,11 @@ HEX [0-9a-fA-F]
 <X_COMMENT>"*/"        yy_pop_state();
 <X_COMMENT>.|\n        ; /* ignore comments */
 
+"Apply"                return tAPPLY;
+"to"                   return tTO;
+"from"                 return tFROM;
+".."                   return tRANGE;
+
 ">="                   return tGE;
 "<="                   return tLE;
 "=="                   return tEQ;
@@ -56,7 +61,7 @@ HEX [0-9a-fA-F]
 
 "0"[xX]                yy_push_state(X_HEX);
 <X_HEX>[a-fA-F0-9]+    try {
-                         yylval.i = std::stoi(yytext, nullptr, 16); yy_pop_state(); 
+                         yylval.i = std::stoi(yytext, nullptr, 16); yy_pop_state();
                          return tINTEGER;
                        } catch (std::out_of_range&) {
                          yyerror("hexadecimal overflow");
