@@ -28,7 +28,7 @@ void m19::type_checker::do_map_node(cdk::nil_node * const node, int lvl) {
     if (symbol->arguments().size() == 1) {
       throw std::string("function needs to have only one argument.");
     }
-    if (symbol->arguments[0]->name() != symbol->type()->name()) {
+    if (symbol->arguments()[0]->name() != symbol->type()->name()) {
       throw std::string("function arguments need to be the same type as the function.");
     }
   }
