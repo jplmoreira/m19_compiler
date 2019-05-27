@@ -25,7 +25,7 @@ void m19::type_checker::do_map_node(cdk::nil_node * const node, int lvl) {
   } else if (!symbol->is_function()) {
     throw std::string(id + "is not a function.");
   } else {
-    if (symbol->arguments().size() == 1) {
+    if (symbol->arguments().size() != 1) {
       throw std::string("function needs to have only one argument.");
     }
     if (symbol->arguments()[0]->name() != symbol->type()->name()) {
